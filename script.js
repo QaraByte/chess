@@ -38,15 +38,22 @@ $(document).ready(function() {
                     let td_id = $(tds[i]).attr('id');
                     if (td_id != undefined) {
                         //console.log(td_id);
-                        if (figure.x < 8 && td_id[3] == figure.y) {
-                            if (td_id[1] > figure.x) {
-                                $(tds[i]).addClass('can-move');
-                            }
+                        //Если ячейка не равна выбранной ячейке
+                        //если x<8, т.е. если координата x меньше конца доски по оси X (столбца 8 не существует, столбец 7 самый последний)
+                        //если у фигуры координата Y равна Y ячейки, т.е. они находятся на одной строке 
+                        if (td_id[1] != x && figure.x < 8 && td_id[3] == figure.y) {
+                            let img = $(tds[i]).find('img'); //Есть ли картинка в ячейке
+                            if (img == undefined)
+                                if (td_id[1] > figure.x) {
+                                    $(tds[i]).addClass('can-move');
+                                }
                         }
+                        //Если координата Y у выбранной ячейки больше, чем начало доски по оси Y
+                        //если координата X у выбранной ячейки равна координате X у ячейке на доске
                         if (figure.y > 0 && td_id[1] == figure.x) {
-                            if (td_id[1] < figure.y) {
-                                $(tds[i]).addClass('can-move');
-                            }
+                            //if (td_id[1] < figure.y) {
+                            $(tds[i]).addClass('can-move');
+                            //}
                         }
                     }
                 }
