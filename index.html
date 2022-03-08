@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<div class="chess-desk">
+    <table class="tbl">
+        <thead>
+            <tr>
+                <th></th>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+                <th>d</th>
+                <th>e</th>
+                <th>f</th>
+                <th>g</th>
+                <th>h</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="width: 20px; border: 0px;">8</td>
+                <td id="x1y8" class="rook-white-1" data-figure="rook-white"><img src="img/rook-white.png" style="width:30px;" draggable="true"></td>
+                <td id="x2y8" colspan="knight-white-1" class="filled-cell" data-figure="knight-white"><img src="img/knight-white.png" style="width: 30px;"></td>
+                <td id="x3y8" class="bishop-white-1" data-figure="bishop-white"></td>
+                <td id="x4y8" class="filled-cell" data-figure="queen-white"></td>
+                <td id="x5y8" data-coords="0705">&nbsp;</td>
+                <td id="x6y8" class="filled-cell" data-coords="0706">&nbsp;</td>
+                <td id="x7y8" data-coords="0707">&nbsp;</td>
+                <td id="x8y8" class="filled-cell" data-coords="0708">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20px; border: 0px;">7</td>
+                <td id="x1y7" class="filled-cell">&nbsp;</td>
+                <td id="x2y7">&nbsp;</td>
+                <td id="x3y7" class="filled-cell">&nbsp;</td>
+                <td id="x4y7">&nbsp;</td>
+                <td id="x5y7" class="filled-cell">&nbsp;</td>
+                <td id="x6y7">&nbsp;</td>
+                <td id="x7y7" class="filled-cell">&nbsp;</td>
+                <td id="x8y7">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20px; border: 0px;">6</td>
+                <td id="x1y6">&nbsp;</td>
+                <td id="x2y6" class="filled-cell">&nbsp;</td>
+                <td id="x3y6">&nbsp;</td>
+                <td id="x4y6" class="filled-cell">&nbsp;</td>
+                <td id="x5y6">&nbsp;</td>
+                <td id="x6y6" class="filled-cell">&nbsp;</td>
+                <td id="x7y6">&nbsp;</td>
+                <td id="x8y6" class="filled-cell">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20px; border: 0px;">5</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20px; border: 0px;">4</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20px; border: 0px;">3</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20px; border: 0px;">2</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20px; border: 0px;">1</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="filled-cell">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<body>
+    <footer>
+        <script src="script.js"></script>
+    </footer>
+</body>
+
+</html>
