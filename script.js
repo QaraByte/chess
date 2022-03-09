@@ -25,7 +25,7 @@ $(document).ready(function() {
             console.log(id);
             let figureAttr = $(this).data('figure');
             console.log(figureAttr);
-            if (figureAttr == 'rook-white') {
+            if (figureAttr == 'rook-white') { //Если белая ладья
                 let x = id[1];
                 let y = id[3];
                 console.log('x=' + x + ' y=' + y);
@@ -53,7 +53,12 @@ $(document).ready(function() {
                         if (figure.y > 0 && td_id[1] == figure.x) {
                             //if (td_id[1] < figure.y) {
                             $(tds[i]).addClass('can-move');
-                            //}
+                            $(".can-move").click(function() {
+                                let cl = $('.clicked').find('img').detach();
+                                $(this).append(cl);
+                                $('.clicked').removeClass('clicked');
+                                $('.can-move').removeClass('can-move');
+                            });
                         }
                     }
                 }
