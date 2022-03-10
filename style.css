@@ -40,6 +40,10 @@
     background-color: chocolate;
 }
 
+.clicked {
+    background-color: cadetblue;
+}
+
 .can-move {
     background-color: aquamarine;
 }

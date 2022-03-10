@@ -19,8 +19,8 @@ $(document).ready(function() {
             $('.can-move').removeClass('can-move');
             $(this).addClass('clicked');
             //console.log($(this).attr('id'));
-            $('td').css('background-color', '');
-            $(this).css('background-color', 'cadetblue');
+            //$('td').css('background-color', '');
+            //$(this).css('background-color', 'cadetblue');
             let id = $(this).attr('id');
             console.log(id);
             let figureAttr = $(this).data('figure');
@@ -52,12 +52,18 @@ $(document).ready(function() {
                         //если координата X у выбранной ячейки равна координате X у ячейке на доске
                         if (figure.y > 0 && td_id[1] == figure.x) {
                             //if (td_id[1] < figure.y) {
-                            $(tds[i]).addClass('can-move');
+                            //let this_id = $(this).attr('id');
+                            let tds_id = $(tds[i]).attr('id');
+                            if (tds_id != id) {
+                                $(tds[i]).addClass('can-move');
+                            }
                             $(".can-move").click(function() {
                                 let cl = $('.clicked').find('img').detach();
                                 $(this).append(cl);
+                                //$('.clicked').
                                 $('.clicked').removeClass('clicked');
                                 $('.can-move').removeClass('can-move');
+                                $(this).attr('data-figure', 'rook-white').data('figure', 'rook-white')
                             });
                         }
                     }
